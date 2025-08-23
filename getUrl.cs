@@ -48,7 +48,7 @@ public class Test
             return null;
         }
     }
-    public static string getGachaLogUrl(string path)
+    public static string getUrlFordata_2(string path)
     {
         if (string.IsNullOrEmpty(path))return "未能获取到数据目录.";
         {
@@ -83,14 +83,14 @@ public class Test
             {
                 case '1': gameDir = getDirForOutputlog("原神"); break;
                 case '2': gameDir = getDirForPlayerlog("崩坏：星穹铁道"); break;
-                case '3': gameDir = getDirForPlayerlog("绝区零"); break;
+                case '3': gameDir = getDirForOutputlog("绝区零"); break;
                 default:
                     Console.WriteLine("无效输入，请按 1 或 2 或 3 选择游戏.\n");
                     continue;
             }
             break;
         }
-        var result = getGachaLogUrl(gameDir);
+        var result = getUrlFordata_2(gameDir);
         Console.WriteLine(result);
         return result;
     }
